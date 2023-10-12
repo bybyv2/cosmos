@@ -1,0 +1,29 @@
+Auteur: pj81tfz
+Date: 09.10.2023
+Entreprise: DGEP
+Description: calculette
+
+Voici les ordres du programme calculette  :
+	Allouer #resultat.
+	Allouer #chiffre1.
+	Afficher "Opérande A: ".
+	Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+	Allouer #chiffre2.
+	Afficher "Opérande B: ".
+	Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre2.
+	Allouer #operateur.
+	Afficher "Opérateur: ".
+	Récupérer la saisie et la stocker dans la zone mémoire nommée #operateur.
+
+		Si #operateur est égal à "+" alors
+			#resultat = #chiffre1 + #chiffre2.
+		sinon si #operateur est égal à "-" alors
+			#resultat = #chiffre1 - #chiffre2.
+		sinon si #operateur est égal à "*" alors
+			#resultat = #chiffre1 * #chiffre2.
+		sinon si #operateur est égal à ":" alors
+			#resultat = #chiffre1 / #chiffre2.
+	?
+	Afficher "\n\nTon résultat :#resultat\n".
+	
+Fin de la transmission.

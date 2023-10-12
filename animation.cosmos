@@ -1,0 +1,35 @@
+Auteur: pj81tfz
+Date: 05.10.2023
+Entreprise: DGEP
+Description: animation
+
+Voici les ordres du programme animation  :
+	Allouer #symbole.
+		Afficher "Symbole ?: ".
+			Récupérer la saisie et la stocker dans #symbole.
+	Allouer #delai.
+	Afficher "Temps de pause (en ms): ".
+	Récupérer la saisie et la stocker dans #delai.
+	Allouer #repetition.
+	Afficher "nombre de répétitions: ".
+	Récupérer la saisie et la stocker dans #repetition.
+	
+	Attendre 1000ms.
+	
+	Placer le curseur à la colonne 1.
+	Afficher "#symbole".
+	Attendre #delai ms.
+	
+	Allouer #colonne.
+	#colonne = 1.
+	Répéter #repetition x
+		Placer le curseur à la colonne #colonne.
+		Afficher " ".
+		
+		Copier le résultat de (#colonne + 1) dans la zone mémoire nommée #colonne.
+		Masquer le curseur.
+		Placer le curseur à la colonne #colonne.
+		Afficher #symbole.
+		Attendre #delai ms.
+	>>
+Fin de la transmission.

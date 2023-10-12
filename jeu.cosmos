@@ -1,0 +1,203 @@
+Auteur: pj81tfz
+Date: 05.10.2023
+Entreprise: DGEP
+Description: jeu
+
+Voici les ordres du programme jeu :
+	
+
+	Effacer l'écran.
+	Masquer le curseur.
+	Afficher "+___________________+\n".
+	Afficher "|Collecteur de Pluie|\n".
+	Afficher "+___________________+".
+	Afficher "\n\n***Menu***\n\n".
+	Choisir la couleur rouge foncé pour le fond.
+	Afficher "Jouer".
+	Afficher "\n".
+	Choisir la couleur noir pour le fond.
+	Afficher "Quitter".
+
+
+
+
+
+	//Gestion du menu
+	Allouer #lignePremiereOption avec la valeur 6.
+	Allouer #ligneDerniereOption avec la valeur 7.
+	Allouer #ligneOpionCourante avec #lignePremiereOption.
+	Allouer #touchePressee.
+		#touchePressee = "vide".
+	
+	Répéter tant que #touchePressee est différente de "Enter"
+	
+		Attendre la prochaine touche et la stocker dans #touchePressee.
+		
+		//l'option jouer est choisie et qu'on est pas dessus
+		Si #touchePressee est égale à "UpArrow" et #ligneOpionCourante est différente de #lignePremiereOption alors
+		
+			Placer le curseur à la ligne #lignePremiereOption.
+			Placer le curseur à la colonne 0.
+			Choisir la couleur rouge foncé pour le fond.
+			Afficher "Jouer".
+			Afficher "\n".
+			Choisir la couleur noir pour le fond.
+			Afficher "Quitter".
+			
+			//on met à jour l'option courante choisie
+			Copier le résultat de (#ligneOpionCourante -1) dans #ligneOpionCourante.
+			
+		//l'option quitter est choisie et on est pas déja dessus
+		sinon si #touchePressee est égale à "DownArrow" et #ligneOpionCourante est différente de #ligneDerniereOption alors
+		
+			Placer le curseur à la ligne #lignePremiereOption.
+			Placer le curseur à la colonne 0.
+			Choisir la couleur noir pour le fond.
+			Afficher "Jouer".
+			Afficher "\n".
+			Choisir la couleur rouge foncé pour le fond.
+			Afficher "Quitter".
+			
+			//on met à jour l'option courante choisie.
+			Copier le résultat de (#ligneOpionCourante +1) dans #ligneOpionCourante.
+			
+		?
+	>>
+			//remise a 0 des couleurs
+			Choisir la couleur noir pour le fond.
+			
+			//si on est la c'est que enter est pressé on va donc regarder l'option choisie
+				//option jouer
+				Si #ligneOpionCourante est égale à #lignePremiereOption alors
+					Effacer l'écran.
+					Afficher "Bienvenue dans le jeu\n".
+					Afficher "Ce jeu a été programmé par un passioné.\n".
+					Afficher "Merci de le respecter\n".
+					Afficher "Bonne chance à tout les joueurs.".
+					Afficher "\n 10".
+					Attendre 1000ms.
+					Afficher "\n 9".
+					Attendre 1000ms.
+					Afficher "\n 8".
+					Attendre 1000ms.
+					Afficher "\n 7".
+					Attendre 1000ms.
+					Afficher "\n 6".
+					Attendre 1000ms.
+					Afficher "\n 5".
+					Attendre 1000ms.
+					Afficher "\n 4".
+					Attendre 1000ms.
+					Afficher "\n 3".
+					Attendre 1000ms.
+					Afficher "\n 2".
+					Attendre 1000ms.
+					Afficher "\n 1".
+					Attendre 1000ms.
+					Afficher "\n C'est partit".
+					Attendre 1000ms.
+					Effacer l'écran.
+					
+					Allouer #colonnelimiteGauche avec la valeur 0.
+					Allouer #colonnelimiteDroite avec la valeur 15.
+					Allouer #collecteurX avec la valeur 7.
+					Allouer #collecteurY avec la valeur 11.
+					//Placement initial
+					Placer le curseur à la ligne #collecteurY.
+					Placer le curseur à la colonne #collecteurX.
+					Afficher "U".
+
+				//Réagir à la touche (faire bouger le bac à pluie)
+
+					
+					Allouer #ligneLimite avec la valeur 10.
+					Allouer #goutteX avec la valeur 0.
+					Allouer #goutteY avec #ligneLimite.
+					
+					Allouer #score avec la valeur 0.
+					Placer le curseur à la colonne 18.
+					Placer le curseur à la ligne 3.
+					Afficher "Score: #score".
+					
+					Répéter tant que #touchePressee est différente de "Escape"
+						Si ##touche.disponible alors
+							Copier ##touche dans #touchePressee.
+							
+							//réagir à la touche (faire bouger le bac à pluie)
+							Si #touchePressee est égale à "LeftArrow" et #collecteurX est différent de #colonnelimiteGauche alors
+								//On efface l'ancienne position
+								Placer le curseur à la ligne #collecteurY.
+								Placer le curseur à la colonne #collecteurX.
+								Afficher " ".
+								
+								//Calcule la nouvelle position
+								Copier le résultat de (#collecteurX - 1) dans #collecteurX.
+								
+								//0n affiche la nouvelle position
+								Placer le curseur à la ligne #collecteurY.
+								Placer le curseur à la colonne #collecteurX.
+								Afficher "U".
+							sinon si #touchePressee est égale à "RightArrow" et #collecteurX est plus petit que #colonnelimiteDroite alors
+								//On efface l'ancienne position
+								Placer le curseur à la ligne #collecteurY.
+								Placer le curseur à la colonne #collecteurX.
+								Afficher " ".
+								
+								//Calcule la nouvelle position
+								Copier le résultat de (#collecteurX + 1) dans #collecteurX.
+								
+								//On affiche la nouvelle position
+								Placer le curseur à la ligne #collecteurY.
+								Placer le curseur à la colonne #collecteurX.
+								Afficher "U".
+							?
+						?
+						
+						//simuler la pluie
+						//efface l'ancienne position de la goutteX
+						Placer le curseur à la ligne #goutteY.
+						Placer le curseur à la colonne #goutteX.
+						Afficher " ".
+						
+						//La goutte est arrivé en bas, on en regénère une
+						Si #goutteY est égale à #ligneLimite alors
+							Copier 0 dans #goutteY.
+							Placer un nombre aléatoire compris entre 1 et 15 dans la zone mémoire nommée #goutteX.
+						et sinon
+							//on fait descendre la goutte
+							Copier le résultat de (#goutteY +1) dans #goutteY.
+						?
+						
+						//dessine la goutte à la nouvelle postition
+						Placer le curseur à la ligne #goutteY.
+						Placer le curseur à la colonne #goutteX.
+						Afficher "|".
+						
+						//comparaison des positions de la goutte et du collecteur pour le score
+						Si #goutteY est égal à (#collecteurY - 1) et #goutteX est égal à #collecteurX alors
+							Copier le résultat de (#score+5) dans #score.
+							Placer le curseur à la colonne 18.
+							Placer le curseur à la ligne 3. 
+							Afficher "Score: #score".
+						?
+						
+						//vitesse du jeu
+						Attendre 100ms.
+					>>
+				?
+					
+					//suite du jeu.
+					
+					
+					
+					
+					
+					
+				//option quitter
+				
+					Effacer l'écran.
+					Afficher "\n\nAu revoir !\n\n".
+					Afficher "Ton score final: #score".
+							
+			
+Fin de la transmission.

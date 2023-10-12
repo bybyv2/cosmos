@@ -1,0 +1,144 @@
+Auteur: pj81tfz
+Date: 05.10.2023
+Entreprise: DGEP
+Description: Million
+
+Voici les ordres du programme Million  :
+	//première question
+	
+	Afficher "En quelle année est né le langage cosmos ?\n\n".
+	Afficher "A. En 1934			B.En 2001\n".
+	Afficher "C. En 2016			D.En 2019\n".
+	
+	Afficher "\nVotre réponse: ".
+	
+	Créer une zone mémoire nommée #reponse1.
+	Récupérer la saisie et la stocker dans la zone mémoire nommée #reponse1.
+	
+	Si la valeur enregistrée dans la zone mémoire nommée #reponse1 est égale à "D" ou #reponse1 est égale à "d" alors
+		Afficher "Bravo, t'es chaud le million c'est pour bientôt".
+
+		//deuxième question
+		Afficher "\n\n Cosmos est un langage de programmation proche de ?\n\n".
+		Afficher "A. La langue française		B. L'allemand\n".
+		Afficher "C. La langue russe		C.Rien\n".
+		
+		Afficher "\nVotre réponse: ".
+		
+		Récupérer la saisie et la stocker dans la zone mémoire nommée #reponse1.
+		
+		Si la valeur enregistrée dans la zone mémoire nommée #reponse1 est égale à "A" ou #reponse1 est égale à "a" alors
+			Afficher "\nBravo, déjà la deuxième question !".
+		
+		
+		//troisième question
+			Afficher "\n\n Counter-Strike Global Offensive est un jeu qui est sortit en \n\n".
+			Afficher "A. 2015		B. 2017\n".
+			Afficher "C. 2012		D.2009\n".
+		
+			Afficher "\nVotre réponse: ".
+		
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #reponse1.
+		
+			Si la valeur enregistrée dans la zone mémoire nommée #reponse1 est égale à "C" ou #reponse1 est égale à "c" alors
+				Afficher "\nBravo, déjà la troisième question !".
+			
+			
+				//quatrième question
+				Afficher "\n\n Qui est le PDG actuel d'Apple ?\n\n".
+				Afficher "A. Steve Jobs		B. Tim Cook\n".
+				Afficher "C. Madrina Bagogo	D.Sundar Pichai\n".				
+		
+				Afficher "\nVotre réponse: ".
+		
+				Récupérer la saisie et la stocker dans la zone mémoire nommée #reponse1.
+		
+				Si la valeur enregistrée dans la zone mémoire nommée #reponse1 est égale à "B" ou #reponse1 est égale à "b" alors
+				Afficher "\nWESHHH DEJA QUATRE QUESTIONS T'ES CHAUD !".
+				
+				
+					//cinqième question
+					Afficher "\n\n Qu'appelle-t-on Voie lactée ?\n\n".
+					Afficher "A.Une étoile		B.Notre galaxie\n".
+					Afficher "C.Un singe		D.Notre planète\n".
+		
+					Afficher "\nVotre réponse: ".
+		
+					Récupérer la saisie et la stocker dans la zone mémoire nommée #reponse1.
+		
+					Si la valeur enregistrée dans la zone mémoire nommée #reponse1 est égale à "B" ou #reponse1 est égale à "b" alors
+					Afficher "\nLa Voie lactée (appelée aussi « notre galaxie », ou parfois simplement \n« la Galaxie », avec une majuscule) est le nom de la galaxie dans laquelle se situent \nle Système solaire où vit l’humanité, ainsi que toutes les étoiles visibles à l’œil nu. !".
+					
+						//six
+						Afficher "\n\n\n Laquelle de ces agences est capable d'envoyer des hommes dans l'espace ?\n\n".
+						Afficher "A.L'agence spatiale fédérale russe (RSA)	B.L'agence spatiale européenne (ESA)\n".
+						Afficher "B.Le British National Space Centre (BNSC) 	C.L'Indian Space Research Organisation (ISRO)\n".
+					
+						Afficher "\nVotre réponse: ".
+					
+						Récupérer la saisie et la stocker dans la zone mémoire nommée #reponse1.
+					
+						Si la valeur enregistrée dans la zone mémoire nommée #reponse1 est égale à "A" ou #reponse1 est égale à "a" alors
+						Afficher "Waou tu as des connaissances".
+						
+							//sept
+							Afficher "\n\nQuelle est la distance Terre-Lune ?\n\n".
+							Afficher "A.257'000 km		B.386'000 km\n".
+							Afficher "C.324'000 km		D.97'000 km\n".
+							
+							Afficher "\nVotre réponse: ".
+							Récupérer la saisie et la stocker dans la zone mémoire nommée #reponse1.
+							
+							Si la valeur enregistrée dans la zone mémoire nommée #reponse1 est égale à "B" ou #reponse1 est égale à "b" alors
+							Afficher "C'est déjà la septième question... ET TU AS JUSTEEEEEEEEEEEE".
+							
+								//huit
+								Afficher "\n\nCombien y a-t-il d'étoiles dans notre système solaire ?\n\n".							
+								Afficher "A.100'000		B.500\n".
+								Afficher "C.30			D.Une seule\n".
+								
+								Afficher "\nVotre réponse: ".
+								Récupérer la saisie et la stocker dans la zone mémoire nommée #reponse1.
+
+								Si la valeur enregistrée dans la zone mémoire nommée #reponse1 est égale à "D" ou #reponse1 est égale à "d" alors
+								Afficher "Évidemment, notre seule étoile, c'est le soleil !".
+								
+									//neuf
+									Afficher "\n\nQuelle est la capitale du Brésil ?\n\n".								
+									Afficher "A.Brasília	B.Rio de Janeiro\n".
+									Afficher "C.Sao paulo	D.Natal\n".
+									
+									Afficher "\nVotre réponse: ".
+									Récupérer la saisie et la stocker dans #reponse1.
+									
+									Si #reponse1 == "A" ou #reponse1 == "a" alors
+										Afficher "Bravo, tu as gagné le million !".
+									et sinon
+										Afficher "TU AS PERDU A LA DERNIERE QUESTION".
+									?
+								et sinon
+									Afficher "T'es pas serieux... Évidemment, notre seule étoile, c'est le soleil !".
+								?
+							et sinon
+								Afficher "Malheureusement tu as perdu à la question 7 :(".
+							?
+						et sinon
+							Afficher "Presque millionaire, mais NON".
+						?
+					et sinon
+						Afficher "\nLa procaine fois :)".
+					?				
+				et sinon
+					Afficher "\n Wsh ta quand même réussi 3 questions".
+				?
+			et sinon
+				Afficher "\n LOOOOOOOOOOOOOOOOOOSER".
+			?
+		et sinon
+			Afficher "\nT'es finitooooo après 1 question".
+		?
+	et sinon
+		Afficher "\nC'est fini t'es pas bon".
+	?
+	
+Fin de la transmission.

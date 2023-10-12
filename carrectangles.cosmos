@@ -1,0 +1,72 @@
+Auteur: pv18qys
+Date: 11.10.2023
+Entreprise: DGEP
+Description: carrectangles
+
+Voici les ordres du programme carrectangles  :
+	Masquer le curseur.
+	Allouer #largeur.
+	Allouer #longueur.
+	Allouer #vide avec le texte "A".
+	Allouer #plein avec le texte "B".
+	Allouer #remplie.
+	
+	Afficher "Largeur:\n".
+	Récupérer la saisie et la stocker dans #largeur.
+	Afficher "Hauteur:\n".
+	Récupérer la saisie et la stocker dans #longueur.
+	Afficher "vide (A) ou plein (B):\n".
+	Récupérer la saisie et la stocker dans #remplie.
+	
+	Si #largeur est égale à #longueur alors
+		Afficher "voici le carré demandé:\n".
+	et sinon 
+		Afficher "voici le rectangle demandé:\n".
+	?
+
+	Si #remplie est égale à #vide alors 
+		Afficher "+".
+		Répéter (#largeur) x
+			Afficher "--".
+		>>
+		Afficher "+".
+		
+		Répéter (#longueur) x
+			Afficher "\n|".
+				Répéter (#largeur) x
+					Afficher "  ".
+					
+				>>
+			Afficher "|".
+		>>
+	
+		Afficher "\n+".
+		Répéter (#largeur) x
+			Afficher "--".
+		>>
+		Afficher "+".
+		
+	sinon si #remplie est égale à #plein alors 
+		Afficher "+".
+		Répéter (#largeur) x
+			Afficher "--".
+		>>
+		Afficher "+".
+		
+		Répéter (#longueur) x
+			Afficher "\n|".
+				Répéter (#largeur) x
+					Afficher "@ ".
+					
+				>>
+			Afficher "|".
+		>>
+	
+		Afficher "\n+".
+		Répéter (#largeur) x
+			Afficher "--".
+		>>
+		Afficher "+".
+	?
+	
+Fin de la transmission.

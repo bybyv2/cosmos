@@ -1,0 +1,10 @@
+Auteur: pj81tfz
+Date: 04.10.2023
+Entreprise: DGEP
+Description: HelloCosmos
+
+Voici les ordres du programme HelloCosmos :
+	Allouer #texte.
+	#texte = "tu es millionaire".
+	Afficher #texte.
+Fin de la transmission.

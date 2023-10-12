@@ -1,0 +1,33 @@
+Auteur: pj81tfz
+Date: 05.10.2023
+Entreprise: DGEP
+Description: ligne
+
+Voici les ordres du programme ligno  :
+		Allouer #symbole.
+		#symbole = "|".
+	Allouer #delai.
+	Afficher "Temps de pause (en ms): ".
+	Récupérer la saisie et la stocker dans #delai.
+	
+	Attendre 1000ms.
+	
+	Placer le curseur à la ligne 2.
+	Afficher "#symbole".
+	Attendre #delai ms.
+	
+	Allouer #ligne.
+	#ligne = 2.
+	Masquer le curseur.
+	Répéter 50x
+		
+		Placer le curseur à la ligne #ligne.
+		Afficher " ".
+		Placer le curseur à la colonne 1.	
+		Copier le résultat de (#ligne + 1) dans la zone mémoire nommée #ligne.
+
+		Placer le curseur à la ligne #ligne.
+		Afficher #symbole.
+		Attendre #delai ms.
+	>>
+Fin de la transmission.

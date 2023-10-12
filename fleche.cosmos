@@ -1,0 +1,49 @@
+Auteur: pj81tfz
+Date: 05.10.2023
+Entreprise: DGEP
+Description: fleche
+
+Voici les ordres du programme fleche  :
+	Masquer le curseur.
+	
+	Allouer #colonne.
+	#colonne = 1.
+	Allouer #touchepress.
+	
+	Répéter tant que #touchepress est différente de "Escape"
+	
+	Attendre la prochaine touche et la stocker dans #touchepress.
+	
+	Si #touchepress est égale à "RightArrow" alors
+		//efface l'ancien symbole
+		Placer le curseur à la colonne #colonne.
+		Afficher " ".
+		
+		//incémente le numéro de colonne
+		Copier le résultat de (#colonne + 1) dans #colonne.
+		
+		//Dessine le symbole à la nouvelle position
+		Placer le curseur à la colonne #colonne.
+		Afficher ">".
+	?
+		
+		Si #touchepress est égale à "LeftArrow" alors
+			//efface l'ancien symbole
+			Placer le curseur à la colonne #colonne.
+			Afficher " ".
+		
+			//incémente le numéro de colonne
+			Copier le résultat de (#colonne - 1) dans #colonne.
+		
+			//Dessine le symbole à la nouvelle position
+			Placer le curseur à la colonne #colonne.
+			Afficher "<".
+		?
+	
+	>>
+	
+	
+	
+	
+	
+Fin de la transmission.

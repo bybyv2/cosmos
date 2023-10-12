@@ -1,0 +1,90 @@
+Auteur: pj81tfz
+Date: 11.10.2023
+Entreprise: DGEP
+Description: test
+
+Voici les ordres du programme test  :
+// Initialisation
+Allouer #longueur.
+Allouer #largeur.
+Allouer #teteX.
+Allouer #teteY.
+Allouer #fruitX.
+Allouer #fruitY.
+Allouer #direction.
+Allouer #corpsX.
+Allouer #corpsY.
+// Initialisation des variables
+#longueur = 1.
+#largeur = 10.
+#teteX = #largeur / 2.
+#teteY = #longueur / 2.
+#fruitX = 5.
+#fruitY = 5.
+#direction = "droite".
+Allouer #jeuActif.
+#jeuActif = vrai.
+
+// Fonction pour afficher le jeu
+Effacer l'écran.
+
+// Afficher la tête du serpent
+Placer le curseur à la ligne #teteY.
+Placer le curseur à la colonne #teteX.
+Afficher "O".
+
+// Afficher le fruit
+Placer le curseur à la ligne #fruitY.
+Placer le curseur à la colonne #fruitX.
+Afficher "*".
+
+// Afficher le corps du serpent
+Pour #i de 1 à #longueur
+    Placer le curseur à la ligne #corpsY[#i].
+    Placer le curseur à la colonne #corpsX[#i].
+    Afficher "#".
+?
+
+// Boucle de jeu
+Répéter tant que #jeuActif
+    Attendre la prochaine touche et la stocker dans #touchepress.
+
+    // Déplacer la tête du serpent en fonction de la direction
+    Si #direction == "droite" alors
+        #teteX = #teteX + 1.
+    sinon si #direction == "gauche" alors
+        #teteX = #teteX - 1.
+    sinon si #direction == "haut" alors
+        #teteY = #teteY - 1.
+    sinon si #direction == "bas" alors
+        #teteY = #teteY + 1.
+    ?
+
+    // Mettre à jour le corps du serpent
+    Copier le résultat de #teteX dans #corpsX[1].
+    Copier le résultat de #teteY dans #corpsY[1].
+
+    // Vérifier si le serpent a mangé le fruit
+    Si #teteX = #fruitX et #teteY = #fruitY alors
+        #longueur = #longueur + 1.
+        #fruitX = #fruitX + (Nombre aléatoire entre -1 et 1).
+        #fruitY = #fruitY + (Nombre aléatoire entre -1 and 1).
+    ?
+
+    // Afficher le jeu
+    Appeler AfficherJeu.
+
+    // Mettre à jour la direction en fonction de la touche pressée
+    Si #touchepress == "RightArrow" et #direction ≠ "gauche" alors
+        #direction = "droite".
+    sinon si #touchepress == "LeftArrow" et #direction ≠ "droite" alors
+        #direction = "gauche".
+    sinon si #touchepress == "UpArrow" et #direction ≠ "bas" alors
+        #direction = "haut".
+    sinon si #touchepress == "DownArrow" et #direction ≠ "haut" alors
+        #direction = "bas".
+    sinon si #touchepress == "Escape" alors
+        #jeuActif = Faux.
+    ?
+?
+Fin de la transmition.

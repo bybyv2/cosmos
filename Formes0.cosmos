@@ -1,0 +1,50 @@
+Auteur: Jonathan Melly
+Date: 02.10.2020
+Entreprise: ETML
+Description: Base à une dimension pour créer des formes à 2 dimensions...
+
+Voici les ordres du programme Formes  :
+	Masquer le curseur.
+	Afficher "\n".
+	Créer #longueurLigne.
+	Créer #compteur avec la valeur 1.
+	Créer #largeurLigne.
+	
+	Afficher "Largeur de la ligne (entre 1 et 9): ".
+	Récupérer la saisie et la stocker dans #largeurLigne.
+	
+	
+	Afficher "Longueur de la ligne (entre 1 et 9): ".
+	Récupérer la saisie et la stocker dans #longueurLigne.
+	
+	Si #longueurLigne == #longueurLigne alors
+		Afficher "Carré".
+	et sinon
+		Afficher "Rectangle".
+	?
+	
+	Afficher "\n".
+	Afficher "@".
+	Répéter (#largeurLigne) x
+		Afficher "__".
+		Attendre 75ms.
+	>>
+	Afficher "@".
+	
+	Répéter (#longueurLigne) x
+		Afficher "\n|".
+		Attendre 75ms.
+	>>
+	Afficher "\n".
+	Afficher "@".
+	Répéter (#largeurLigne) x
+		Afficher "__".
+		Copier le résultat de (#largeurLigne + 1) dans la zone mémoire nommée #largeurLigne.
+	>>
+		Afficher "@".
+	Afficher "\n\n".
+	
+	Afficher "Si la ligne est de même longueur que la série de chiffres, alors la longueur est correcte...".
+
+	
+Fin de la transmission.
